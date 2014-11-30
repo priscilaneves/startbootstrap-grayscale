@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+ * Start Bootstrap - Grayllale Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
@@ -24,10 +24,20 @@ h4,
 h5,
 h6 {
     margin: 0 0 35px;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Aldrich ,serif;
     font-weight: 700;
     letter-spacing: 1px;
+}
+
+}
+
+h3,
+h4,
+h5,
+h6 {
+    
+    text-transform: uppercase;
+    
 }
 
 p {
@@ -45,7 +55,7 @@ p {
 }
 
 a {
-    color: #219ab3;
+    color: #228b22;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -54,7 +64,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #11505d;
+    color: #32cd32;
 }
 
 .light {
@@ -295,17 +305,17 @@ a:focus {
 }
 
 .btn-default {
-    border: 1px solid #219ab3;
-    color: #219ab3;
+    border: 1px solid #228b22;
+    color: #228b22;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #219ab3;
+    border: 1px solid #32CD32;
     outline: 0;
     color: #000;
-    background-color: #219ab3;
+    background-color: #32CD32;
 }
 
 ul.banner-social-buttons {
@@ -336,6 +346,9 @@ footer {
 
 footer p {
     margin: 0;
+    color: #228b22;
+    font-family:  Aldrich ,serif;
+    font-size: small;
 }
 
 ::-moz-selection {
