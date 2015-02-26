@@ -389,7 +389,32 @@ ul.banner-social-buttons {
     ul.banner-social-buttons li:last-child {
         margin-bottom: 0;
     }
+
+    footer.panel-footer{
+        padding-top: 245px;
+    }
 }
+
+@media (max-width: 1024px) {
+    footer.panel-footer{
+        padding-top: 65px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    footer.panel-footer{
+        padding-top: 315px;
+    }
+}
+
+@media (max-width: 640px)  {
+
+    footer.panel-footer{
+        padding-top: 255px;
+    }
+}
+
 
 footer {
     padding: 0px 0;
