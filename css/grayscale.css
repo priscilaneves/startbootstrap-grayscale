@@ -415,6 +415,9 @@ ul.banner-social-buttons {
     }
 }
 
+h1.borderTitle{
+    text-shadow: #064000 1px -1px, #064000 -1px 1px, #064000 1px 1px, #064000 -1px -1px
+}
 
 footer {
     padding: 0px 0;
