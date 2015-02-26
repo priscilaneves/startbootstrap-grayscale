@@ -476,3 +476,7 @@ input.mce_inline_error {
     background-color: #FF9494;
     color: #ffffff;
 }
+
+.borderTitle {
+    text-shadow:#006400 1px -1px, #006400 -1px 1px, #006400 1px 1px, #006400 -1px -1px
+}
