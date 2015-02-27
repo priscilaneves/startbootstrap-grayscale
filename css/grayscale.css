@@ -10,6 +10,7 @@ body {
     font-family: Aldrich ,serif, Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
     background-color: #000;
+    webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
 
 html {
@@ -35,12 +36,15 @@ h3,
 h4,
 h5,
 h6 {
-    
+
     text-transform: uppercase;
-    
+
 }
 
-h1 {font-style: italic;}
+h1 {
+    font-style: italic;
+
+}
 
 p {
     margin: 0 0 25px;
@@ -48,11 +52,56 @@ p {
     line-height: 1.5;
 }
 
-@media(min-width:767px) {
+@media (min-width: 767px) {
     p {
         margin: 0 0 35px;
         font-size: 20px;
         line-height: 1.6;
+    }
+
+    .navbar {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+        background-color: #000;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        border-bottom: 1px solid rgba(255,255,255,.3);
+    }
+
+    .intro {
+        height: 100%;
+        padding: 0;
+    }
+
+    .intro .intro-body .brand-heading {
+        font-size: 100px;
+    }
+
+    .intro .intro-body .intro-text {
+        font-size: 25px;
+    }
+
+    .content-section {
+        padding-top: 60px;
+    }
+
+    .download-section {
+        padding: 55px 30;
+    }
+
+    #map {
+        height: 400px;
+        margin-top: 250px;
     }
 }
 
@@ -74,10 +123,10 @@ a:focus {
 }
 
 .navbar-custom {
-    margin-bottom: 0;
+    margin-top: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
-    font-family:  Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: #000;
 }
 
@@ -92,7 +141,7 @@ a:focus {
 .navbar-custom .navbar-brand .navbar-toggle {
     padding: 4px 6px;
     font-size: 16px;
-    color: #fff;
+    color: #FFFFFF;
 }
 
 .navbar-custom .navbar-brand .navbar-toggle:focus,
@@ -105,7 +154,7 @@ a:focus {
 }
 
 .navbar-custom .nav li.active {
-    outline: nonte;
+    outline: none;
     background-color: rgba(255,255,255,.3);
 }
 
@@ -122,26 +171,6 @@ a:focus {
     background-color: rgba(255,255,255,.3);
 }
 
-@media(min-width:767px) {
-    .navbar {
-        padding: 20px 0;
-        border-bottom: 0;
-        letter-spacing: 1px;
-        background: 0 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
-    }
-
-    .top-nav-collapse {
-        padding: 0;
-        background-color: #000;
-    }
-
-    .navbar-custom.top-nav-collapse {
-        border-bottom: 1px solid rgba(255,255,255,.3);
-    }
-}
 
 .intro {
     display: table;
@@ -164,26 +193,11 @@ a:focus {
 }
 
 .intro .intro-body .brand-heading {
-    font-size: 40px;
+    font-size: 80px;
 }
 
 .intro .intro-body .intro-text {
     font-size: 18px;
-}
-
-@media(min-width:767px) {
-    .intro {
-        height: 100%;
-        padding: 0;
-    }
-
-    .intro .intro-body .brand-heading {
-        font-size: 100px;
-    }
-
-    .intro .intro-body .intro-text {
-        font-size: 25px;
-    }
 }
 
 .btn-circle {
@@ -226,7 +240,7 @@ a:focus {
     -moz-animation-timing-function: linear;
 }
 
-@-webkit-keyframes pulse {    
+@-webkit-keyframes pulse {
     0 {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -243,7 +257,7 @@ a:focus {
     }
 }
 
-@-moz-keyframes pulse {    
+@-moz-keyframes pulse {
     0 {
         -moz-transform: scale(1);
         transform: scale(1);
@@ -260,24 +274,27 @@ a:focus {
     }
 }
 
+/* PADDING E HEIGHT IMPORTANTE */
 .content-section {
-    padding-top: 0;
-    height: 100%;
-}
-#download.content-section{
-    padding-top: 0;
-    height: 140%;
+    padding-top: 2%;
+    /*height: 100%;*/
 }
 
+/* POR ENQUANTO NADA A UTILIZAR */
+/*#download.content-section {*/
+    /*padding-top: 0;*/
+    /*height: 100%;*/
+/*}*/
+
+/* SOLUÇÕES */
 .download-section {
     width: 100%;
-    height: 105%;
-    padding: 100px 0;
+    /*height: 95%;*/
+    padding: 70px 0;
     background: url(../img/office-2.png) no-repeat center scroll;
 
-    
-    font-family: Aldrich ,serif, Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #FFFFFF;
+    font-family: Aldrich , serif, Lora, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
 
     background-color: #000;
     -webkit-background-size: cover;
@@ -286,11 +303,10 @@ a:focus {
     -o-background-size: cover;
 }
 
-
 .about-section {
     width: 100%;
-    height: 100%;
-    padding: 80px 0;
+    /*height: 100%;*/
+    padding: 70px 0;
     color: #fff;
     text-align: justify;
 
@@ -303,18 +319,15 @@ a:focus {
 
 .contact-section {
     width: 100%;
-    height: 100%;
+    height: 10%;
     padding: 70px 0;
-
     color: #fff;
-
 
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-
 }
 
 footer.panel-footer {
@@ -325,97 +338,6 @@ footer.panel-footer {
     clear: both;
 }
 
-#map {
-    width: 100%;
-    height: 100px;
-    margin-top: 100px;
-}
-
-@media(min-width:767px) {
-    .content-section {
-        padding-top: 60px;
-    }
-
-    .download-section {
-        padding: 55px 30;
-    }
-
-    #map {
-        height: 400px;
-        margin-top: 250px;
-    }
-}
-
-.btn {
-    text-transform: uppercase;
-    font-family: Aldrich ,serif, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-
-.btn-default {
-    border: 1px solid #228b22;
-    color: #32CD32;
-    background-color: transparent;
-}
-
-.btn-default:hover,
-.btn-default:focus {
-    border: 1px solid #32CD32;
-    outline: 0;
-    color: #000;
-    background-color: #32CD32;
-}
-
-ul.banner-social-buttons {
-    margin-top: 0;
-}
-
-@media(max-width:1199px) {
-    ul.banner-social-buttons {
-        margin-top: 1px;
-    }
-}
-
-@media(max-width:767px) {
-    ul.banner-social-buttons li {
-        display: block;
-        margin-bottom: 2px;
-        padding: 0;
-    }
-
-    ul.banner-social-buttons li:last-child {
-        margin-bottom: 0;
-    }
-
-    footer.panel-footer{
-        padding-top: 245px;
-    }
-}
-
-@media (max-width: 1024px) {
-    footer.panel-footer{
-        padding-top: 65px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    footer.panel-footer{
-        padding-top: 315px;
-    }
-}
-
-@media (max-width: 640px)  {
-
-    footer.panel-footer{
-        padding-top: 255px;
-    }
-}
-
-
 footer {
     padding: 0px 0;
 }
@@ -423,7 +345,7 @@ footer {
 footer p {
     margin: 55;
     color: #228b22;
-    font-family:  Aldrich ,serif;
+    font-family: Aldrich , serif;
     font-size: small;
 }
 
@@ -446,18 +368,58 @@ img::selection {
 img::-moz-selection {
     background: 0 0;
 }
-img.xdevel-logo-topo{
-    width: 15px;
-    height: 15px;
+
+
+.btn {
+    text-transform: uppercase;
+    font-family: Aldrich , serif, Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
-body {
-    webkit-tap-highlight-color: rgba(255,255,255,.2);
+.btn-default {
+    border: 1px solid #228b22;
+    color: #32cd32;
+    background-color: transparent;
 }
 
+.btn-default:hover,
+.btn-default:focus {
+    border: 1px solid #32cd32;
+    outline: 0;
+    color: #000;
+    background-color: #32cd32;
+}
 
-#navbarTop.container{
-    padding: 0px;
+ul.banner-social-buttons {
+    margin-top: 0;
+}
+
+@media (max-width: 1199px) {
+    ul.banner-social-buttons {
+        margin-top: 1px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* BOTÕES ALINHADOS UM ABAIXO DO OUTRO  */
+
+    /*ul.banner-social-buttons li {*/
+        /*display: block;*/
+        /*margin-bottom: 2px;*/
+        /*padding: 0;*/
+    /*}*/
+
+    /*ul.banner-social-buttons li:last-child {*/
+        /*margin-bottom: 0;*/
+    /*}*/
+
+
+
+
 }
 
 hr {
@@ -465,13 +427,12 @@ hr {
     border: none;
 }
 
-textarea#element_2{
-    width: 90%;
-}
-
 input.mce_inline_error {
     background-color: #FF9494;
-    color: #ffffff;
+}
+
+textarea#element_2 {
+    width: 90%;
 }
 
 .borderTitle {
