@@ -462,3 +462,8 @@ textarea#element_2 {
 .borderTitle {
     text-shadow:#006400 1px -1px, #006400 -1px 1px, #006400 1px 1px, #006400 -1px -1px
 }
+
+.subTitle {
+    font-size: 24px;
+
+}
