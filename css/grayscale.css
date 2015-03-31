@@ -69,12 +69,15 @@ p {
         transition: background .5s ease-in-out,padding .5s ease-in-out
     }
 
-    .top-nav-collapse {
+    .topbarFix.top-nav-collapse {
         padding: 0;
         background-color: #000;
         color: #fff;
     }
 
+    .topbarFix {
+        background-color: rgba(0,0,0,.3);
+    }
 
     .navbar-custom.top-nav-collapse {
         border-bottom: 1px solid rgba(255,255,255,.3);
@@ -86,6 +89,7 @@ p {
 
     .intro {
         height: 100%;
+        width: 100%;
         padding: 0;
     }
 
@@ -103,6 +107,8 @@ p {
 
     .download-section {
         padding: 55px 30;
+        height: 100%;
+        widows: 100%;
     }
 
     #map {
@@ -112,14 +118,17 @@ p {
 
     .about-section {
         height: 100%;
+        width: 100%;
     }
 
     .download-section {
         height: 100%;
+        width: 100%;
     }
 
-    .contact-section.contact {
-        height: 940px;
+    .contact-section {
+        height: 100%;
+        width: 100%;
     }
 
 }
@@ -151,6 +160,7 @@ a:focus {
 
 .navbar-custom .navbar-brand {
     font-weight: 700;
+    padding: 6px 17px;
 }
 
 .navbar-custom .navbar-brand:focus {
@@ -169,7 +179,7 @@ a:focus {
 }
 
 .navbar-custom a {
-    color: #000
+    color: #fff;
 }
 
 .navbar-custom .nav li.active {
@@ -296,6 +306,7 @@ a:focus {
 /* PADDING E HEIGHT IMPORTANTE */
 .content-section {
     padding-top: 2%;
+    min-height: 100%;
     /*height: 100%;*/
 }
 
@@ -309,7 +320,7 @@ a:focus {
 .download-section {
     width: 100%;
     height: 100%;
-    padding: 70px 0;
+    padding: 158px 0;
     background: url(../img/office-2.png) no-repeat center scroll;
 
     font-family: Aldrich , serif, Lora, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -329,6 +340,7 @@ a:focus {
     color: #fff;
     text-align: justify;
 
+    background: 100%;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
