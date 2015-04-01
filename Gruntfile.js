@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 	        collapseWhitespace: true
 	      },
 	      files: {                                 // Dictionary of files
-	        'index.html': 'dist/index.html',   // 'destination': 'source'
+	        'index.html': 'dist/index.html'   // 'destination': 'source'
 	      }
 	    }
   	},
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 		    },
 		    expand: true,
 		    cwd: '.',
-		    src: ['**/*','!**/node_modules/**','!LICENSE','!README.md','!Gruntfile.js'],
+		    src: ['**/*','!**/node_modules/**','!**/dist/**','!LICENSE','!README.md','!Gruntfile.js'],
 		    dest: 'dist/',
 		    rename: function(dest, src) {
 			            var out = dest + '/' + src + '.gz';
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 	  main: {
 	    files: [
 	      // includes files within path and its sub-directories
-	      {expand: true, src: ['**/*'], dest: 'dist/'}
+	      {expand: true, src: ['**/*','!**/dist/**'], dest: 'dist/'}
 	    ]
 	  }
 	}
