@@ -487,3 +487,13 @@ textarea#element_2 {
 
 }
 
+.animatedImg {
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -webkit-animation-duration: 1.2s;
+    -moz-animation-duration: 1.2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+}
