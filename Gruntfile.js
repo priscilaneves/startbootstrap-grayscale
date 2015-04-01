@@ -5,16 +5,19 @@ module.exports = function(grunt) {
     clean: {
   		main: ["dist"]
 	},
-    htmlmin: {                                     // Task
-	    dist: {                                    // Target
-	      options: {                               // Target options
-	        removeComments: true,
-	        collapseWhitespace: true
-	      },
-	      files: {                                 // Dictionary of files
-	        'index.html': 'dist/index.html'   // 'destination': 'source'
-	      }
-	    }
+    htmlmin: {                                // Task
+			dev: {
+				options: {                          // Target options
+					removeComments: true,
+					collapseWhitespace: true
+				},
+				files: [{
+					expand: true,
+					cwd: '.',
+					src: 'index.html',
+					dest: 'dist'
+				}]
+			}
   	},
     compress: {
 		  main: {
@@ -36,7 +39,7 @@ module.exports = function(grunt) {
 	  main: {
 	    files: [
 	      // includes files within path and its sub-directories
-	      {expand: true, src: ['**/*','!**/dist/**'], dest: 'dist/'}
+	      {expand: true, src: ['**/*','!**/dist/**','!**/node_modules/**'], dest: 'dist/'}
 	    ]
 	  }
 	}
