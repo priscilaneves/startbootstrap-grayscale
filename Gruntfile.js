@@ -26,13 +26,27 @@ module.exports = function(grunt) {
 		    },
 		    expand: true,
 		    cwd: '.',
-		    src: ['**/*','!**/node_modules/**','!**/dist/**','!LICENSE','!README.md','!Gruntfile.js'],
-		    dest: 'dist/',
-		    rename: function(dest, src) {
-			            var out = dest + '/' + src + '.gz';
-			            return out;
-        			}
-		  }
+		    src: ['**/*','!**/node_modules/**','!**/dist/**','!LICENSE','!README.md','!Gruntfile.js','!index.html','dist/index.html'],
+		    dest: 'dist/'//,
+		    //rename: function(dest, src) {
+			 //          var out = dest + '/' + src + '.gz';
+			 //          return out;
+        		//}
+		  }//,
+		//index: {
+		//	options: {
+		//		mode: 'gzip'
+		//	},
+		//	expand: true,
+		//	cwd: '.',
+		//	src: ['dist/index.html'],
+		//	dest: '.'//,
+		//	//rename: function(dest, src) {
+		//	//          var out = dest + '/' + src + '.gz';
+		//	//          return out;
+		//	//}
+		//}
+
 		
 	},
 	copy: {
