@@ -110,6 +110,11 @@ p {
         height: 100%;
         widows: 100%;
     }
+	.team-section {
+        padding: 55px 30;
+        height: 100%;
+        widows: 100%;
+    }
 
     #map {
         height: 400px;
@@ -122,6 +127,10 @@ p {
     }
 
     .download-section {
+        height: 100%;
+        width: 100%;
+    }
+	.team-section {
         height: 100%;
         width: 100%;
     }
@@ -322,6 +331,21 @@ a:focus {
     height: 100%;
     padding: 158px 0;
     background: url(../img/office-2.png) no-repeat center scroll;
+
+    font-family: Aldrich , serif, Lora, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.team-section {
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0;
+    background: #000;
 
     font-family: Aldrich , serif, Lora, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff;
