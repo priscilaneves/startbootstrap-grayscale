@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 		    },
 		    expand: true,
 		    cwd: '.',
-		    src: ['**/*','!**/img' ,'!**/node_modules/**','!**/dist/**','!LICENSE','!README.md','!Gruntfile.js','!index.html','dist/index.html'],
+		    src: ['**/*','!**/img/**' ,'!**/node_modules/**','!**/dist/**','!LICENSE','!README.md','!Gruntfile.js','!index.html','dist/index.html'],
 		    dest: 'dist/'//,
 
 		  }
