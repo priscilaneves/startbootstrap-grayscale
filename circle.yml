@@ -13,6 +13,5 @@ deployment:
   prod:
     branch: gh-pages
     commands:
-      - grunt
       - (bash s3cmd.sh)
       - grunt test
