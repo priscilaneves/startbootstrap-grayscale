@@ -23,14 +23,12 @@ module.exports = function(grunt) {
             dynamic: {                         // Another target
                 options: {                       // Target options
                     optimizationLevel: 3,
-                    svgoPlugins: [{ removeViewBox: false }],
-                    use: [mozjpeg()]
+                    svgoPlugins: [{ removeViewBox: false }]
                 },
                 files: [{
                     expand: true,
-                    cwd: 'public/assets',
-                    src: ['{images,xduka}/**/*.{png,jpg,gif}'],
-                    dest: 'dist/public/assets'
+                    src: ['img/*.{png,jpg,gif}'],
+                    dest: 'dist/img'
                 }]
             }
         },
