@@ -56,28 +56,28 @@ module.exports = function(grunt) {
 	  }
 	},
 
-  pagespeed: {
-  options: {
-    nokey: true
-  },
-  desktop: {
-    options: {
-      url: "https://xdevel.com.br",
-      locale: "pt_BR",
-      strategy: "desktop",
-      threshold: 90
+    pagespeed: {
+      options: {
+          nokey: true,
+          url: "https://developers.google.com"
+      },
+      desktop: {
+        options: {
+          url: "http://xdevel.com.br",
+          locale: "pt_BR",
+          strategy: "desktop",
+          threshold: 90
+        }
+      },
+      mobile: {
+        options: {
+          url: "http://xdevel.com.br",
+          locale: "pt_BR",
+          strategy: "desktop",
+          threshold: 75
+        }
+      }
     }
-  },
-  mobile: {
-    options: {
-      url: "https://xdevel.com.br",
-      locale: "pt_BR",
-      strategy: "desktop",
-      threshold: 75
-    }
-  }
-
-}
 
   });
   grunt.loadNpmTasks('grunt-contrib-clean');
