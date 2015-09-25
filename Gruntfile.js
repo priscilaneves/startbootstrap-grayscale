@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
 
+  var mozjpeg = require('imagemin-mozjpeg');
+
   // Project configuration.
   grunt.initConfig({
     clean: {
@@ -23,7 +25,8 @@ module.exports = function(grunt) {
             dynamic: {                         // Another target
                 options: {                       // Target options
                     optimizationLevel: 3,
-                    svgoPlugins: [{ removeViewBox: false }]
+                    svgoPlugins: [{ removeViewBox: false }],
+                    use: [mozjpeg()]
                 },
                 files: [{
                     expand: true,
