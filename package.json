@@ -1,0 +1,31 @@
+{
+  "name": "xdevel-landing-page",
+  "version": "1.0.0",
+  "description": "site xdevel",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-compress": "^0.13.0",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-htmlmin": "^0.4.0",
+    "grunt-contrib-rename": "^0.0.3",
+    "grunt-contrib-uglify": "^0.8.1",
+    "grunt-pagespeed": "^1.0.0",
+    "imagemin": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claytonsilva/xdevel-landing-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/claytonsilva/xdevel-landing-page/issues"
+  },
+  "homepage": "https://github.com/claytonsilva/xdevel-landing-page#readme"
+}
