@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 		//	//}
 		//}
 
-		
+
 	},
 	copy: {
 	  main: {
@@ -56,17 +56,43 @@ module.exports = function(grunt) {
 	      {expand: true, src: ['**/*','!**/dist/**','!**/node_modules/**'], dest: 'dist/'}
 	    ]
 	  }
-	}
-	
+	},
+
+  pagespeed: {
+  options: {
+    nokey: true
+  },
+  desktop: {
+    options: {
+      url: "https://xdevel.com.br",
+      locale: "pt_BR",
+      strategy: "desktop",
+      threshold: 90
+    }
+  },
+  mobile: {
+    options: {
+      url: "https://xdevel.com.br",
+      locale: "pt_BR",
+      strategy: "desktop",
+      threshold: 75
+    }
+  }
+
+}
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  
+  grunt.loadNpmTasks('grunt-pagespeed');
+
 
   // Default task(s).
   grunt.registerTask('default', ['clean','copy','htmlmin','compress']);
+
+  grunt.registerTask('test', ['pagespeed']);
 
 };
