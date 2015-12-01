@@ -21,20 +21,6 @@ module.exports = function(grunt) {
 				}]
 			}
   	},
-    imagemin: {
-            dynamic: {                         // Another target
-                options: {                       // Target options
-                    optimizationLevel: 3,
-                    svgoPlugins: [{ removeViewBox: false }],
-                    use: [mozjpeg()]
-                },
-                files: [{
-                    expand: true,
-                    src: ['img/*.{png,jpg,gif}'],
-                    dest: 'dist/'
-                }]
-            }
-        },
     compress: {
 		  main: {
 		    options: {
@@ -46,9 +32,6 @@ module.exports = function(grunt) {
 		    dest: 'dist/'//,
 
 		  }
-
-
-
 	},
 	copy: {
 	  main: {
@@ -56,7 +39,14 @@ module.exports = function(grunt) {
 	      // includes files within path and its sub-directories
 	      {expand: true, src: ['**/*','!**/dist/**','!**/node_modules/**'], dest: 'dist/'}
 	    ]
-	  }
+	  },
+      images: {
+        files: [{
+            expand: true,
+            src: ['img/*.{png,jpg,gif}'],
+            dest: 'dist/'
+        }]
+      }
 	},
 
     pagespeed: {
@@ -88,11 +78,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-pagespeed');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
 
   // Default task(s).
-  grunt.registerTask('default', ['clean','copy','htmlmin','imagemin','compress']);
+  grunt.registerTask('default', ['clean','copy','htmlmin','copy:images','compress']);
 
   grunt.registerTask('test', ['pagespeed']);
 
