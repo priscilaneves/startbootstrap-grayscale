@@ -46,9 +46,6 @@ module.exports = function(grunt) {
 		    dest: 'dist/'//,
 
 		  }
-
-
-
 	},
 	copy: {
 	  main: {
@@ -56,7 +53,14 @@ module.exports = function(grunt) {
 	      // includes files within path and its sub-directories
 	      {expand: true, src: ['**/*','!**/dist/**','!**/node_modules/**'], dest: 'dist/'}
 	    ]
-	  }
+	  },
+      images: {
+        files: [{
+            expand: true,
+            src: ['img/*.{png,jpg,gif}'],
+            dest: 'dist/'
+        }]
+      }
 	},
 
     pagespeed: {
@@ -92,7 +96,7 @@ module.exports = function(grunt) {
 
 
   // Default task(s).
-  grunt.registerTask('default', ['clean','copy','htmlmin','imagemin','compress']);
+  grunt.registerTask('default', ['clean','copy','htmlmin','copy:images','compress']);
 
   grunt.registerTask('test', ['pagespeed']);
 
