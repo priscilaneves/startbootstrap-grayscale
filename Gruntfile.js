@@ -21,20 +21,6 @@ module.exports = function(grunt) {
 				}]
 			}
   	},
-    imagemin: {
-            dynamic: {                         // Another target
-                options: {                       // Target options
-                    optimizationLevel: 3,
-                    svgoPlugins: [{ removeViewBox: false }],
-                    use: [mozjpeg()]
-                },
-                files: [{
-                    expand: true,
-                    src: ['img/*.{png,jpg,gif}'],
-                    dest: 'dist/'
-                }]
-            }
-        },
     compress: {
 		  main: {
 		    options: {
@@ -92,7 +78,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-pagespeed');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
 
   // Default task(s).
