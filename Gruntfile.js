@@ -59,7 +59,7 @@ module.exports = function(grunt) {
           url: "http://xdevel.com.br",
           locale: "pt_BR",
           strategy: "desktop",
-          threshold: 90
+          threshold: 85
         }
       },
       mobile: {
