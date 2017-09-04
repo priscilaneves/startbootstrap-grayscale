@@ -1,0 +1,17 @@
+machine:
+  node:
+    version: 0.12.0
+dependencies:
+  override:
+    - sudo pip install awscli
+test:
+  override:
+    - npm install
+    - npm install --dev
+    - grunt
+deployment:
+  prod:
+    branch: gh-pages
+    commands:
+      - (bash s3cmd.sh)
+      - grunt test
